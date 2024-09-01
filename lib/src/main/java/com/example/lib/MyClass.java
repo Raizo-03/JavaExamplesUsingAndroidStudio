@@ -9,6 +9,11 @@ public class MyClass {
 
         printNonPrimitiveVariables();
 
+        printTypeCasting();
+        BreakAndContinueKeyword();
+
+        Car newCar = new Car(1, 1);
+        newCar.accelerate();
     }
 
     public static void println(String e){
@@ -88,7 +93,64 @@ public class MyClass {
     //TypeCastings
     public static void printTypeCasting(){
 
+        //Type Casting - the process of converting
+        //a value from one data type to another
+
+        //Implicit Typecasting
+        //from small data type to large data type
+        int numInt = 10;
+        double numDouble = numInt;
+
+
+        //Explicit Type Casting
+        //from large data type to smaller data type
+        double pi = 3.14;
+        int numPi = (int) pi; // the decimal is removed and left to 3
+
+        //Other examples
+        //int to char
+        int myInt = 5;
+        char myChar = (char)(myInt + 'A' );
+
+
+        System.out.println(numDouble);
+        System.out.println(numPi);
+        System.out.println(myChar);
     }
 
+    public static void printingOperators(){
+        //Arithmetic Operators + - / *
+        //Comparison Operators > < == != <= >=
+        //Logical Operators && || !
+    }
 
+    public static void Strings(){
+        //String length
+        String name = "ejay";
+        int length = name.length();
+
+
+    }
+
+    public static void BreakAndContinueKeyword(){
+
+        //continue use for skipping a certain condition in a loop and continuing
+        //even the certain condition is met
+        for (int i =0; i < 10; i++){
+            if(i == 4){
+                println("Reached number 4");
+                continue;
+            }
+            System.out.println(i);
+        }
+
+        //break is used for breaking the loop when a certain condition is met
+        for (int i =0; i < 10; i++){
+            if(i == 4){
+                println("Reached number 4");
+                break;
+            }
+            System.out.println(i);
+        }
+    }
 }
