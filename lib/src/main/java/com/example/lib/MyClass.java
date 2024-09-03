@@ -12,8 +12,25 @@ public class MyClass {
         printTypeCasting();
         BreakAndContinueKeyword();
 
-        Car newCar = new Car(1, 1);
-        newCar.accelerate();
+        //Inheritance
+        CarVehicleSubClass myCar = new CarVehicleSubClass("Toyota");
+
+
+        //Polymorphism
+        Vehicle car = new CarVehicleSubClass("Nissan");
+        Vehicle truck = new TruckVehicleSubClass(10);
+
+
+        car.start();
+        truck.start();
+
+
+        //Abstraction
+        car.brake();
+        truck.brake();
+
+        //Vehicle v = new Vehicle(); = cannot create an object of the parent class as it's already abstract
+        //Declaring a method "brake" in an abstract, the subclasses should override it
     }
 
     public static void println(String e){
